@@ -13,10 +13,10 @@ public class BookShop {
 
 	public static void main(String[] args) {
 		List <Literature> bookList = new ArrayList<>();
-		Book book1 = new Book("qwer", "asd", "zxc", 2000);
-		Book book2 = new Book("rty", "dfg", "cvb", 1990);
-		Book book3 = new Book.Builder().withAuthor("qazxssw").withYear(2020).build();
-		Magazine magazine1 = new Magazine("poi", "lkjh", 1982, 12);
+		Book book1 = new Book("Лем", "Солярис", "Знание-сила", 1961);
+		Book book2 = new Book("Ремарк", "Ночь в Лиссабоне", "Harcourt", 1962);
+		Book book3 = new Book.Builder().withAuthor("Хемингуэй").withTitle("Старик и море").withYear(1952).build();
+		Magazine magazine1 = new Magazine("Times", "News Corporation", 2019, 365);
 		bookList.add(book1);
 		bookList.add(book2);
 		bookList.add(book3);
@@ -45,13 +45,13 @@ public class BookShop {
 				}
 				if(j==2) {
 					System.out.println("Введите следующие данные через Enter");
-					System.out.println("Автор, название, год, количество номеров в год");
+					System.out.println("Издательство, название, год, количество номеров в год");
 					litera = new LiteratureFactory().getLiterature(LiteratureType.MAGAZINE);
-					String author = scanner.next();
+					String publisher = scanner.next();
 					String title = scanner.next();
 					int year = scanner.nextInt();
 					int numbersPerYear = scanner.nextInt();
-					litera = new Magazine(author, title, year, numbersPerYear);
+					litera = new Magazine(publisher, title, year, numbersPerYear);
 					bookList.add(litera);
 				}
 			}

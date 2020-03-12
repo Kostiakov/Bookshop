@@ -2,7 +2,7 @@ package literature;
 
 public class Magazine implements Literature {
 	
-	private String author;
+	private String publisher;
 	private String title;
 	private int year;
 	private int numbersPerYear;
@@ -11,8 +11,8 @@ public class Magazine implements Literature {
 		
 	};
 	
-	public Magazine(String author, String title, int year, int numbersPerYear) {
-		this.author = author;
+	public Magazine(String publisher, String title, int year, int numbersPerYear) {
+		this.publisher = publisher;
 		this.title = title;
 		this.year = year;
 		this.numbersPerYear = numbersPerYear;
@@ -20,7 +20,7 @@ public class Magazine implements Literature {
 
 	@Override
 	public String toString() {
-		return "Magazine [author=" + author + ", title=" + title + ", year=" + year + ", numbersPerYear="
+		return "Magazine [publisher=" + publisher + ", title=" + title + ", year=" + year + ", numbersPerYear="
 				+ numbersPerYear + "]";
 	}
 	
